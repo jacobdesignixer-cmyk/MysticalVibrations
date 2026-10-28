@@ -1,0 +1,4 @@
+﻿*.png
+screenshot*
+.DS_Store
+Thumbs.db

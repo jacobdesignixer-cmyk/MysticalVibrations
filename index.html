@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mystical Vibrations | Sacred Sound Therapy & Holistic Energy Healing</title>
+  <meta name="description" content="Harmonize your mind, body, and spirit at Mystical Vibrations. Experience restorative sound baths, Bio-Well biophotonic energy scans, clinical aromatherapy, and herbal remedies.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       PAGE PRELOADER & LOADING ANIMATION
+       ========================================================================== -->
+  <div id="site-preloader" aria-hidden="true">
+    <div class="preloader-flower-wrap">
+      <div class="preloader-ring"></div>
+      <div class="preloader-ring"></div>
+      <div class="preloader-ring"></div>
+      <svg class="preloader-flower-svg" viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="14" stroke="#d4af37" stroke-width="1.5" fill="rgba(212,175,55,0.15)" />
+        <circle cx="50" cy="30" r="14" stroke="#d4af37" stroke-width="1" />
+        <circle cx="50" cy="70" r="14" stroke="#d4af37" stroke-width="1" />
+        <circle cx="32" cy="40" r="14" stroke="#d4af37" stroke-width="1" />
+        <circle cx="68" cy="40" r="14" stroke="#d4af37" stroke-width="1" />
+        <circle cx="32" cy="60" r="14" stroke="#d4af37" stroke-width="1" />
+        <circle cx="68" cy="60" r="14" stroke="#d4af37" stroke-width="1" />
+      </svg>
+    </div>
+    <div class="preloader-title">Mystical Vibrations</div>
+    <div class="preloader-progress-bar">
+      <div class="preloader-progress-fill"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CANVAS AMBIENT PARTICLES (Floating Golden Leaves & Botanical Petals)
+       ========================================================================== -->
+  <canvas id="ambient-particles-canvas"></canvas>
+
+  <!-- ==========================================================================
+       SIDE ANIMATED GRAPHICS (Running on Left & Right Rails of the Website)
+       ========================================================================== -->
+  <!-- Left Side Rail: Floating Golden Leaves, Sacred Lotus & Vibration Stream -->
+  <aside class="side-rail side-rail-left" aria-hidden="true">
+    <div class="vibration-stream-line"></div>
+    
+    <!-- Rotating Sacred Lotus Flower Graphic -->
+    <div class="side-blooming-flower side-flower-top">
+      <svg viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="12" fill="rgba(212,175,55,0.2)" stroke="#d4af37" stroke-width="1.2"/>
+        <path d="M50 15 C45 30 45 40 50 50 C55 40 55 30 50 15 Z" fill="rgba(255,245,215,0.4)" stroke="#d4af37" stroke-width="1"/>
+        <path d="M50 85 C45 70 45 60 50 50 C55 60 55 70 50 85 Z" fill="rgba(255,245,215,0.4)" stroke="#d4af37" stroke-width="1"/>
+        <path d="M15 50 C30 45 40 45 50 50 C40 55 30 55 15 50 Z" fill="rgba(255,245,215,0.4)" stroke="#d4af37" stroke-width="1"/>
+        <path d="M85 50 C70 45 60 45 50 50 C60 55 70 55 85 50 Z" fill="rgba(255,245,215,0.4)" stroke="#d4af37" stroke-width="1"/>
+        <path d="M25 25 C37 34 43 43 50 50 C43 43 34 37 25 25 Z" fill="rgba(212,175,55,0.25)" stroke="#d4af37" stroke-width="1"/>
+        <path d="M75 75 C63 66 57 57 50 50 C57 57 66 63 75 75 Z" fill="rgba(212,175,55,0.25)" stroke="#d4af37" stroke-width="1"/>
+        <path d="M75 25 C63 34 57 43 50 50 C57 43 66 37 75 25 Z" fill="rgba(212,175,55,0.25)" stroke="#d4af37" stroke-width="1"/>
+        <path d="M25 75 C37 66 43 57 50 50 C43 57 34 63 25 75 Z" fill="rgba(212,175,55,0.25)" stroke="#d4af37" stroke-width="1"/>
+      </svg>
+    </div>
+
+    <!-- Floating Live Animated Leaves & Petals -->
+    <div class="rail-leaf-cluster">
+      <div class="floating-leaf-item">
+        <svg viewBox="0 0 32 32" fill="none">
+          <path d="M16 2 C10 8 6 15 9 24 C13 28 22 27 25 21 C28 14 22 7 16 2 Z" fill="rgba(212,175,55,0.3)" stroke="#d4af37" stroke-width="1.2"/>
+          <line x1="16" y1="4" x2="16" y2="24" stroke="rgba(212,175,55,0.6)" stroke-width="0.8"/>
+        </svg>
+      </div>
+      <div class="floating-leaf-item">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="5" fill="rgba(255,240,200,0.6)" stroke="#d4af37" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="floating-leaf-item">
+        <svg viewBox="0 0 32 32" fill="none">
+          <path d="M16 3 C8 10 7 20 16 29 C25 20 24 10 16 3 Z" fill="rgba(212,175,55,0.25)" stroke="#e5c56c" stroke-width="1"/>
+          <line x1="16" y1="5" x2="16" y2="27" stroke="rgba(212,175,55,0.7)" stroke-width="0.8"/>
+        </svg>
+      </div>
+      <div class="floating-leaf-item">
+        <svg viewBox="0 0 28 28" fill="none">
+          <path d="M14 2 C9 7 5 13 8 21 C11 25 19 24 22 19 C25 12 19 6 14 2 Z" fill="rgba(212,175,55,0.35)" stroke="#d4af37" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="floating-leaf-item">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="4" fill="rgba(212,175,55,0.5)"/>
+        </svg>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Right Side Rail: Animated Botanical Vines & Blooming Lotus -->
+  <aside class="side-rail side-rail-right" aria-hidden="true">
+    <div class="vibration-stream-line"></div>
+    
+    <!-- Swaying Living Botanical Vine -->
+    <svg class="side-vine-svg" viewBox="0 0 50 1000" preserveAspectRatio="none">
+      <path d="M25,0 Q40,150 20,300 T30,600 T15,900 T25,1000" stroke="rgba(212,175,55,0.4)" stroke-width="1.4" fill="none"/>
+      <!-- Delicate leaves along vine -->
+      <path d="M22,120 Q35,110 32,130 Q25,135 22,120" fill="rgba(212,175,55,0.3)" stroke="#d4af37" stroke-width="1"/>
+      <path d="M27,240 Q15,230 18,250 Q25,255 27,240" fill="rgba(212,175,55,0.3)" stroke="#d4af37" stroke-width="1"/>
+      <path d="M24,420 Q38,410 35,430 Q27,435 24,420" fill="rgba(212,175,55,0.3)" stroke="#d4af37" stroke-width="1"/>
+      <path d="M28,680 Q14,670 17,690 Q25,695 28,680" fill="rgba(212,175,55,0.3)" stroke="#d4af37" stroke-width="1"/>
+      <path d="M23,840 Q37,830 34,850 Q26,855 23,840" fill="rgba(212,175,55,0.3)" stroke="#d4af37" stroke-width="1"/>
+    </svg>
+
+    <!-- Rotating Sacred Lotus Flower Graphic Bottom -->
+    <div class="side-blooming-flower side-flower-bottom">
+      <svg viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="12" fill="rgba(212,175,55,0.2)" stroke="#d4af37" stroke-width="1.2"/>
+        <path d="M50 15 C45 30 45 40 50 50 C55 40 55 30 50 15 Z" fill="rgba(255,245,215,0.4)" stroke="#d4af37" stroke-width="1"/>
+        <path d="M50 85 C45 70 45 60 50 50 C55 60 55 70 50 85 Z" fill="rgba(255,245,215,0.4)" stroke="#d4af37" stroke-width="1"/>
+        <path d="M15 50 C30 45 40 45 50 50 C40 55 30 55 15 50 Z" fill="rgba(255,245,215,0.4)" stroke="#d4af37" stroke-width="1"/>
+        <path d="M85 50 C70 45 60 45 50 50 C60 55 70 55 85 50 Z" fill="rgba(255,245,215,0.4)" stroke="#d4af37" stroke-width="1"/>
+        <path d="M25 25 C37 34 43 43 50 50 C43 43 34 37 25 25 Z" fill="rgba(212,175,55,0.25)" stroke="#d4af37" stroke-width="1"/>
+        <path d="M75 75 C63 66 57 57 50 50 C57 57 66 63 75 75 Z" fill="rgba(212,175,55,0.25)" stroke="#d4af37" stroke-width="1"/>
+      </svg>
+    </div>
+
+    <!-- Floating Live Animated Leaves & Petals -->
+    <div class="rail-leaf-cluster">
+      <div class="floating-leaf-item">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="5" fill="rgba(212,175,55,0.4)"/>
+        </svg>
+      </div>
+      <div class="floating-leaf-item">
+        <svg viewBox="0 0 32 32" fill="none">
+          <path d="M16 2 C10 8 6 15 9 24 C13 28 22 27 25 21 C28 14 22 7 16 2 Z" fill="rgba(212,175,55,0.3)" stroke="#d4af37" stroke-width="1.2"/>
+        </svg>
+      </div>
+      <div class="floating-leaf-item">
+        <svg viewBox="0 0 28 28" fill="none">
+          <path d="M14 2 C9 7 5 13 8 21 C11 25 19 24 22 19 C25 12 19 6 14 2 Z" fill="rgba(212,175,55,0.35)" stroke="#d4af37" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="floating-leaf-item">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="4" fill="rgba(255,245,215,0.6)" stroke="#d4af37" stroke-width="1"/>
+        </svg>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       HEADER & FLOATING FROSTED NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="site-nav-container">
+      <a href="#" class="nav-brand" aria-label="Mystical Vibrations Home">
+        <img src="assets/images/logo.png" alt="Mystical Vibrations" class="nav-brand-logo">
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu-links">
+          <li><a href="#modalities" class="nav-menu-link">Modalities</a></li>
+          <li><a href="#ritual-prep" class="nav-menu-link">Preparation</a></li>
+          <li><a href="#founder" class="nav-menu-link">About Cristine</a></li>
+          <li><a href="#book-purchase" class="nav-menu-link">The Book</a></li>
+          <li><a href="#testimonials" class="nav-menu-link">Testimonials</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#booking" class="btn-pill-primary">
+          <span>Book a Session</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <a href="#modalities">Modalities</a>
+    <a href="#ritual-prep">Sound Bath Preparation</a>
+    <a href="#founder">About Cristine Pontillo</a>
+    <a href="#book-purchase">The Bestselling Book</a>
+    <a href="#testimonials">Client Testimonials</a>
+    <a href="#booking" class="btn-pill-primary" style="text-align: center; justify-content: center; margin-top: 0.5rem;">Book a Session</a>
+  </div>
+
+  <!-- ==========================================================================
+       HERO BANNER SECTION (Matches User Reference Image & Aesthetic)
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <!-- Cinematic Golden Tree of Life Media -->
+    <div class="hero-bg-media">
+      <img src="assets/images/ethereal-tree-hero.jpg" alt="Mystical Golden Tree of Life in Morning Light">
+      <div class="hero-gradient-overlay"></div>
+      <div class="hero-bottom-fade"></div>
+    </div>
+
+    <!-- Center Hero Typography & CTAs -->
+    <div class="hero-center-content">
+      <div class="hero-eyebrow-pill glass-pill">
+        <span>✨ SACRED SOUND & BIOPHOTONIC WELLNESS</span>
+      </div>
+
+      <h1 class="hero-title">
+        The Art of <span class="hero-title-highlight">Harmonic Living</span> & Energy Healing
+      </h1>
+
+      <p class="hero-subtitle">
+        A sacred sanctuary to cultivate deep inner peace, balance your natural biofield, and activate lasting resilience through science-backed frequency practices.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#booking" class="btn-pill-primary">
+          <span>Begin Your Journey</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#book-purchase" class="btn-pill-glass">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+          <span>Explore Bestseller Book</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom Docked Modalities Frosted Glass Bar (Reference Image Feature) -->
+    <div class="hero-bottom-dock-wrap">
+      <div class="hero-bottom-dock">
+        <div class="dock-item">
+          <div class="dock-item-icon">🎵</div>
+          <span>Sound Therapy</span>
+        </div>
+        <div class="dock-item">
+          <div class="dock-item-icon">✨</div>
+          <span>Bio-Well GDV</span>
+        </div>
+        <div class="dock-item">
+          <div class="dock-item-icon">🌿</div>
+          <span>Aromatherapy</span>
+        </div>
+        <div class="dock-item">
+          <div class="dock-item-icon">🌱</div>
+          <span>Herbalism</span>
+        </div>
+        <div class="dock-item">
+          <div class="dock-item-icon">💫</div>
+          <span>Energy Restoration</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CORE HEALING MODALITIES SECTION
+       ========================================================================== */
+  -->
+  <section class="section-wrapper" id="modalities">
+    <div class="section-header">
+      <div class="section-pill-tag">HOLISTIC DISCIPLINES</div>
+      <h2 class="section-title">Bridging Ancient Frequency with Modern Science</h2>
+      <p class="section-subtitle">
+        Every therapy is personalized to restore natural energy flow, unlock cellular self-healing, and guide you into serene autonomic harmony.
+      </p>
+    </div>
+
+    <div class="modalities-grid">
+      <!-- Modality 1: Sound Therapy & Sound Baths -->
+      <div class="glass-panel modality-card">
+        <div class="modality-card-img-wrap">
+          <img src="assets/images/sound-therapy.jpg" alt="Quartz Crystal Singing Bowls & Water Resonance">
+          <div class="modality-tag">Acoustic Entrainment</div>
+        </div>
+        <h3 class="modality-title">Sound Therapy & Sound Baths</h3>
+        <p class="modality-desc">
+          Immerse yourself in harmonic frequencies and restorative vibrations. Guided crystal singing bowl sessions shift brainwave states into meditative theta/delta, releasing deep emotional stress and chronic fatigue.
+        </p>
+        <ul class="modality-features-list">
+          <li class="modality-feature-item">
+            <span class="modality-feature-icon">✦</span>
+            <span>432 Hz & 528 Hz Solfeggio Entrainment</span>
+          </li>
+          <li class="modality-feature-item">
+            <span class="modality-feature-icon">✦</span>
+            <span>Autonomic Nervous System Regulation</span>
+          </li>
+          <li class="modality-feature-item">
+            <span class="modality-feature-icon">✦</span>
+            <span>Promotes Restful, Deep REM Sleep</span>
+          </li>
+        </ul>
+        <a href="#booking" class="btn-pill-glass modality-btn">Reserve Sound Bath</a>
+      </div>
+
+      <!-- Modality 2: Bio-Well Energy Assessment -->
+      <div class="glass-panel modality-card">
+        <div class="modality-card-img-wrap">
+          <img src="assets/images/bio-well.jpg" alt="Bio-Well Biophotonic Energy Field Assessment">
+          <div class="modality-tag">Biophotonic GDV</div>
+        </div>
+        <h3 class="modality-title">Bio-Well Energy Field Assessment</h3>
+        <p class="modality-desc">
+          Pioneering Gas Discharge Visualization (GDV) camera technology captures your electro-photonic glow, mapping the seven chakras and meridians with clinical scientific precision before and after sessions.
+        </p>
+        <ul class="modality-features-list">
+          <li class="modality-feature-item">
+            <span class="modality-feature-icon">✦</span>
+            <span>Full Biofield & Aura Equilibrium Scan</span>
+          </li>
+          <li class="modality-feature-item">
+            <span class="modality-feature-icon">✦</span>
+            <span>7 Chakras Alignment & Stress Index</span>
+          </li>
+          <li class="modality-feature-item">
+            <span class="modality-feature-icon">✦</span>
+            <span>Personalized Energetic Wellness Report</span>
+          </li>
+        </ul>
+        <a href="#booking" class="btn-pill-glass modality-btn">Schedule Bio-Well Scan</a>
+      </div>
+
+      <!-- Modality 3: Aromatherapy & Herbalism -->
+      <div class="glass-panel modality-card">
+        <div class="modality-card-img-wrap">
+          <img src="assets/images/aromatherapy.jpg" alt="Botanical Essential Oils and Herbal Medicine">
+          <div class="modality-tag">Botanical Medicine</div>
+        </div>
+        <h3 class="modality-title">Aromatherapy & Herbal Remedies</h3>
+        <p class="modality-desc">
+          Pure, clinical-grade therapeutic essential oils and custom adaptogenic herbal blends formulated to soothe nervous tension, clear mental brain fog, and support the body's innate regenerative immunity.
+        </p>
+        <ul class="modality-features-list">
+          <li class="modality-feature-item">
+            <span class="modality-feature-icon">✦</span>
+            <span>Custom Essential Oil Formulations</span>
+          </li>
+          <li class="modality-feature-item">
+            <span class="modality-feature-icon">✦</span>
+            <span>Adaptogenic Herbal Support & Vitality</span>
+          </li>
+          <li class="modality-feature-item">
+            <span class="modality-feature-icon">✦</span>
+            <span>Emotional & Limbic System Rebalance</span>
+          </li>
+        </ul>
+        <a href="#booking" class="btn-pill-glass modality-btn">Consult Botanicals</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SOUND BATH PREPARATION GUIDE (Existing Site Advice & Ritual Timeline)
+       ========================================================================== -->
+  <section class="section-wrapper" id="ritual-prep">
+    <div class="section-header">
+      <div class="section-pill-tag">SACRED CEREMONY</div>
+      <h2 class="section-title">Preparing for Your Sound Journey</h2>
+      <p class="section-subtitle">
+        Everything you need to know to ensure a deeply relaxing, restorative immersion into sound frequency and energy alignment.
+      </p>
+    </div>
+
+    <div class="prep-guide-container">
+      <!-- Interactive Checklist (From Site Content) -->
+      <div class="glass-panel prep-checklist-card">
+        <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 0.75rem;">What to Bring</h3>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+          To sink into complete physical comfort, we encourage bringing your personal sanctuary essentials:
+        </p>
+
+        <div class="prep-item-checkbox checked">
+          <div class="custom-check-circle">✓</div>
+          <div>
+            <div class="prep-item-title">Comfortable, Loose Clothing</div>
+            <div class="prep-item-desc">Breathable natural cotton or linen to allow effortless diaphragmatic breathing.</div>
+          </div>
+        </div>
+
+        <div class="prep-item-checkbox checked">
+          <div class="custom-check-circle">✓</div>
+          <div>
+            <div class="prep-item-title">Yoga Mat or Floor Cushion</div>
+            <div class="prep-item-desc">A comfortable supportive base for reclining during the 60-90 minute immersion.</div>
+          </div>
+        </div>
+
+        <div class="prep-item-checkbox checked">
+          <div class="custom-check-circle">✓</div>
+          <div>
+            <div class="prep-item-title">Warm Cozy Blanket & Pillow</div>
+            <div class="prep-item-desc">Body temperature naturally dips as you enter parasympathetic theta sleep states.</div>
+          </div>
+        </div>
+
+        <div class="prep-item-checkbox">
+          <div class="custom-check-circle"></div>
+          <div>
+            <div class="prep-item-title">Eye Mask for Comfort</div>
+            <div class="prep-item-desc">Blocks out ambient light, allowing your visual cortex to rest and deepen trance states.</div>
+          </div>
+        </div>
+
+        <div class="prep-item-checkbox">
+          <div class="custom-check-circle"></div>
+          <div>
+            <div class="prep-item-title">Spring Water for Hydration</div>
+            <div class="prep-item-desc">Sound vibration mobilizes cellular fluids; hydrating grounds and integrates energy.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ceremony Timeline -->
+      <div class="journey-steps-timeline">
+        <div class="journey-step-item">
+          <div class="step-phase-badge">Phase 01 // 15 Min</div>
+          <h4 class="step-title">Grounding & Sacred Intention</h4>
+          <p class="step-desc">
+            We open with gentle breathwork, botanical aromatherapy inhalation, and a personal intention-setting circle to quiet external thoughts.
+          </p>
+        </div>
+
+        <div class="journey-step-item">
+          <div class="step-phase-badge">Phase 02 // 45 Min</div>
+          <h4 class="step-title">Crystal Singing Bowl Immersion</h4>
+          <p class="step-desc">
+            Immersive sonic waves from tuned quartz crystal bowls, Tibetan brass gongs, and harmonic chimes cascade through the physical and energetic bodies.
+          </p>
+        </div>
+
+        <div class="journey-step-item">
+          <div class="step-phase-badge">Phase 03 // 15 Min</div>
+          <h4 class="step-title">Bio-Resonance & Silent Stillness</h4>
+          <p class="step-desc">
+            As the instruments soften into gentle rain chimes, you rest in pure stillness, allowing your autonomic nervous system to recalibrate.
+          </p>
+        </div>
+
+        <div class="journey-step-item">
+          <div class="step-phase-badge">Phase 04 // 15 Min</div>
+          <h4 class="step-title">Grounding Tea & Integration</h4>
+          <p class="step-desc">
+            A warm adaptogenic herbal tonic is served alongside an optional Bio-Well follow-up reading to illuminate your energetic transformation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT CRISTINE PONTILLO (Founder Spotlight)
+       ========================================================================== -->
+  <section class="section-wrapper" id="founder">
+    <div class="glass-panel about-founder-card">
+      <div class="founder-portrait-wrap">
+        <img src="assets/images/cristine-bio.jpg" alt="Cristine Pontillo - Founder of Mystical Vibrations">
+        <div class="author-bestseller-badge">
+          <div class="badge-book-icon">📖</div>
+          <div>
+            <div class="badge-text-title">Contributing Author</div>
+            <div class="badge-text-sub">International Bestseller <em>"The Moment We Rise"</em></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="founder-story-content">
+        <div class="section-pill-tag" style="margin-bottom: 0.5rem; align-self: flex-start;">FOUNDER & PRACTITIONER</div>
+        <h2 class="section-title" style="margin-bottom: 0.5rem;">Cristine Pontillo</h2>
+        <div class="founder-lead-quote">
+          "When you align frequency, intention, and natural medicine, your body instinctively remembers how to heal itself."
+        </div>
+        <p class="founder-bio-text">
+          Originally from Yonkers, New York, Cristine spent 15 dedicated years working in data, statistics, and quality assurance as a field representative for the U.S. Department of Commerce. Her analytical acumen and rigorous scientific perspective uniquely inform her holistic philosophy: true wellness is both an art and a measurable science.
+        </p>
+        <p class="founder-bio-text">
+          Pursuing advanced studies toward a <strong>Doctorate in Natural Medicine</strong>, Cristine founded <em>Mystical Vibrations</em> in Broward County, Florida, to bridge biophotonic energy mapping, Solfeggio sound therapy, and ancient botanical medicine into a transformative healing experience.
+        </p>
+        <div class="credentials-row">
+          <div class="credential-pill">
+            <span>🎓</span> Doctorate in Natural Medicine (Cand.)
+          </div>
+          <div class="credential-pill">
+            <span>🔬</span> Certified Bio-Well GDV Specialist
+          </div>
+          <div class="credential-pill">
+            <span>🎵</span> Sound Therapy Master Practitioner
+          </div>
+          <div class="credential-pill">
+            <span>🌿</span> Clinical Aromatherapist
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       THE BESTSELLING BOOK ("THE MOMENT WE RISE") PURCHASE SECTION
+       ========================================================================== -->
+  <section class="section-wrapper" id="book-purchase">
+    <div class="glass-panel book-showcase-card">
+      <!-- 3D Book Mockup Column -->
+      <div class="book-mockup-wrap">
+        <div class="book-mockup-img-container">
+          <img src="assets/images/book-mockup.jpg" alt="The Moment We Rise - Featuring Cristine Pontillo">
+          <div class="book-bestseller-ribbon">
+            <span>⭐ International Bestseller</span>
+          </div>
+        </div>
+        <div style="margin-top: 1.25rem; font-size: 0.82rem; color: var(--text-muted); text-align: center; display: flex; align-items: center; gap: 0.5rem;">
+          <span>📖 Hardcover & Digital Edition</span>
+          <span>•</span>
+          <span>284 Pages</span>
+          <span>•</span>
+          <span>Foreword & 12 Stories</span>
+        </div>
+      </div>
+
+      <!-- Book Story & Buy Portal -->
+      <div class="book-meta-content">
+        <div class="section-pill-tag" style="margin-bottom: 0.25rem; align-self: flex-start;">OFFICIAL BOOK RELEASE</div>
+        <h2 class="section-title" style="margin-bottom: 0.25rem; font-size: clamp(1.8rem, 3.2vw, 2.6rem);">The Moment We Rise</h2>
+        <div style="font-family: var(--font-display); font-size: 0.92rem; letter-spacing: 0.1em; color: var(--gold-600); margin-bottom: 0.5rem; text-transform: uppercase;">
+          Featuring Chapter <em>"Mystical Vibrations"</em> by Cristine Pontillo
+        </div>
+
+        <div class="book-lead-excerpt">
+          "Stepping away from fifteen years of data and certainty wasn’t just a career change—it was an awakening to the frequencies that sustain life itself."
+        </div>
+
+        <p style="font-size: 0.94rem; color: var(--text-secondary); line-height: 1.7;">
+          In this poignant and empowering anthology, Cristine details her transition from a data-driven federal career with the U.S. Department of Commerce into sound therapy, biophotonic energy work, and holistic wellness. A must-read for anyone standing at the precipice of a new beginning.
+        </p>
+
+        <ul class="book-features-checklist">
+          <li class="book-feature-line">
+            <span class="check-icon">✓</span>
+            <span><strong>Author Hand-Signed Inscription</strong> included on all hardcover orders</span>
+          </li>
+          <li class="book-feature-line">
+            <span class="check-icon">✓</span>
+            <span><strong>Bonus Included:</strong> Free 432 Hz "Miracle Tone" Sound Bath audio download</span>
+          </li>
+          <li class="book-feature-line">
+            <span class="check-icon">✓</span>
+            <span>Free priority sanctuary delivery across the United States</span>
+          </li>
+        </ul>
+
+        <!-- Format & Pricing Selector -->
+        <div class="book-pricing-box">
+          <div class="format-options-row">
+            <button type="button" class="format-option-btn active" data-price="24.95" data-format="Signed Hardcover Edition">
+              <div class="format-name">
+                <span>Hardcover (Signed)</span>
+                <span class="format-price">$24.95</span>
+              </div>
+              <div class="format-sub">Embossed Gold Foil • Free US Shipping</div>
+            </button>
+
+            <button type="button" class="format-option-btn" data-price="12.99" data-format="Digital eBook Edition">
+              <div class="format-name">
+                <span>Digital eBook</span>
+                <span class="format-price">$12.99</span>
+              </div>
+              <div class="format-sub">Instant PDF / Kindle / ePub Download</div>
+            </button>
+          </div>
+
+          <!-- Quantity & Add to Cart -->
+          <div class="purchase-action-bar">
+            <div class="qty-picker">
+              <button type="button" class="qty-btn" id="qty-minus" aria-label="Decrease quantity">−</button>
+              <span class="qty-value" id="book-qty">1</span>
+              <button type="button" class="qty-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+            </div>
+
+            <button type="button" class="btn-add-to-cart" id="add-to-cart-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+              <span id="add-to-cart-label">Add to Sanctuary Cart — $24.95</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CLIENT TESTIMONIALS (From Existing Website)
+       ========================================================================== -->
+  <section class="section-wrapper" id="testimonials">
+    <div class="section-header">
+      <div class="section-pill-tag">CLIENT EXPERIENCES</div>
+      <h2 class="section-title">Words of Transformation</h2>
+      <p class="section-subtitle">
+        Real stories from clients whose journeys have been touched by sound, frequency, and holistic energy restoration.
+      </p>
+    </div>
+
+    <div class="testimonials-grid">
+      <!-- Testimonial 1: Robert Waller -->
+      <div class="glass-panel testimonial-card">
+        <div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "The Sound Therapy session was incredible! I felt so much calmer and more centered afterward. My stress was significantly reduced, and I experienced better sleep that night. Highly recommended!"
+          </p>
+        </div>
+        <div class="testimonial-author-wrap">
+          <div class="client-avatar-circle">RW</div>
+          <div>
+            <div class="client-name">Robert Waller</div>
+            <div class="client-session-tag">Sound Therapy & Sound Bath</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2: Jane Doe -->
+      <div class="glass-panel testimonial-card">
+        <div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "The BioWell scan was eye-opening! It showed me exactly where my energy was blocked, and I received personalized recommendations. After following the advice, I feel more balanced and energized."
+          </p>
+        </div>
+        <div class="testimonial-author-wrap">
+          <div class="client-avatar-circle">JD</div>
+          <div>
+            <div class="client-name">Jane Doe</div>
+            <div class="client-session-tag">Bio-Well Energy Field Assessment</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3: John Doe -->
+      <div class="glass-panel testimonial-card">
+        <div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "I had an aromatherapy session and left feeling relaxed and refreshed. The essential oils helped alleviate my anxiety and tension, and I've noticed a significant improvement in my overall mood and sleep."
+          </p>
+        </div>
+        <div class="testimonial-author-wrap">
+          <div class="client-avatar-circle">JD</div>
+          <div>
+            <div class="client-name">John Doe</div>
+            <div class="client-session-tag">Clinical Aromatherapy & Botanicals</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BOOKING & CONSULTATION SECTION
+       ========================================================================== -->
+  <section class="section-wrapper" id="booking">
+    <div class="booking-section-card">
+      <div class="booking-info-pane">
+        <div>
+          <div class="section-pill-tag">BEGIN YOUR JOURNEY</div>
+          <h2 class="section-title" style="margin-bottom: 1rem;">Schedule Your Sacred Session</h2>
+          <p class="section-subtitle">
+            Whether you seek private sound frequency immersion, a detailed Bio-Well energy scan, or customized herbal wellness, Cristine is honored to guide you.
+          </p>
+        </div>
+
+        <div class="booking-contact-direct">
+          <div class="contact-direct-item">
+            <div class="contact-icon-bubble">📞</div>
+            <div>
+              <div style="font-size: 0.78rem; text-transform: uppercase; color: var(--text-muted);">Direct Phone</div>
+              <a href="tel:7543662983" style="font-weight: 700; color: var(--text-primary); font-size: 1.05rem;">(754) 366-2983</a>
+            </div>
+          </div>
+
+          <div class="contact-direct-item">
+            <div class="contact-icon-bubble">✉️</div>
+            <div>
+              <div style="font-size: 0.78rem; text-transform: uppercase; color: var(--text-muted);">Email Inquiries</div>
+              <a href="mailto:MysticalVibrations@usa.com" style="font-weight: 700; color: var(--text-primary); font-size: 1.05rem;">MysticalVibrations@usa.com</a>
+            </div>
+          </div>
+
+          <div class="contact-direct-item">
+            <div class="contact-icon-bubble">📍</div>
+            <div>
+              <div style="font-size: 0.78rem; text-transform: uppercase; color: var(--text-muted);">Sanctuary Location</div>
+              <div style="font-weight: 600; color: var(--text-primary);">Broward County, Florida & Virtual</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Form -->
+      <form class="booking-form" id="booking-portal-form">
+        <div>
+          <label class="form-label" for="book-name">Full Name *</label>
+          <input type="text" id="book-name" name="name" class="form-input" placeholder="e.g. Elena Vance" required>
+        </div>
+
+        <div>
+          <label class="form-label" for="book-email">Email Address *</label>
+          <input type="email" id="book-email" name="email" class="form-input" placeholder="elena@example.com" required>
+        </div>
+
+        <div>
+          <label class="form-label" for="book-phone">Phone Number</label>
+          <input type="tel" id="book-phone" name="phone" class="form-input" placeholder="(754) 000-0000">
+        </div>
+
+        <div>
+          <label class="form-label" for="book-modality">Desired Modality *</label>
+          <select id="book-modality" name="modality" class="form-select" required>
+            <option value="Sound Therapy & Sound Bath">Sound Therapy & Sound Bath</option>
+            <option value="Bio-Well Energy Field Assessment">Bio-Well Energy Field Assessment</option>
+            <option value="Clinical Aromatherapy & Herbalism">Clinical Aromatherapy & Herbalism</option>
+            <option value="Full Holistic Harmony Package">Full Holistic Harmony Package (All Modalities)</option>
+          </select>
+        </div>
+
+        <div class="form-group-full">
+          <label class="form-label" for="book-date">Preferred Date / Time</label>
+          <input type="date" id="book-date" name="preferredDate" class="form-input">
+        </div>
+
+        <div class="form-group-full">
+          <label class="form-label" for="book-notes">Healing Intentions or Questions</label>
+          <textarea id="book-notes" name="notes" class="form-textarea" placeholder="Share any specific stress points, fatigue, or questions you would like Cristine to address..."></textarea>
+        </div>
+
+        <div id="booking-feedback" class="booking-feedback-msg"></div>
+
+        <button type="submit" class="btn-submit-booking">
+          Reserve Your Session
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LUXURY ETHEREAL FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <img src="assets/images/logo.png" alt="Mystical Vibrations" class="footer-brand-logo">
+        <p class="footer-bio-text">
+          Mystical Vibrations is a sacred sanctuary founded by Cristine Pontillo dedicated to restoring mind, body, and spiritual equilibrium through sound baths, biophotonic energy analysis, and clinical botanicals.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Modalities</div>
+        <ul class="footer-links-list">
+          <li><a href="#modalities" class="footer-link">Sound Therapy & Baths</a></li>
+          <li><a href="#modalities" class="footer-link">Bio-Well GDV Energy Scans</a></li>
+          <li><a href="#modalities" class="footer-link">Clinical Aromatherapy</a></li>
+          <li><a href="#modalities" class="footer-link">Herbal Vitality Blends</a></li>
+          <li><a href="#modalities" class="footer-link">Auriculotherapy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-links-list">
+          <li><a href="#hero" class="footer-link">Home</a></li>
+          <li><a href="#modalities" class="footer-link">Holistic Disciplines</a></li>
+          <li><a href="#ritual-prep" class="footer-link">What to Bring & Rituals</a></li>
+          <li><a href="#founder" class="footer-link">About Cristine Pontillo</a></li>
+          <li><a href="#book-purchase" class="footer-link">The Bestselling Book</a></li>
+          <li><a href="#testimonials" class="footer-link">Client Reviews</a></li>
+          <li><a href="#booking" class="footer-link">Schedule Appointment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Sanctuary Hours</div>
+        <p style="font-size: 0.88rem; color: #9ca3af; line-height: 1.8;">
+          Monday – Friday: 9:00 AM – 7:00 PM<br>
+          Saturday: 10:00 AM – 6:00 PM<br>
+          Sunday: Sacred Sound Baths by Appt<br><br>
+          <strong style="color: var(--gold-300);">Phone:</strong> (754) 366-2983<br>
+          <strong style="color: var(--gold-300);">Email:</strong> MysticalVibrations@usa.com
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div>
+        © 2026 Mystical Vibrations. All rights reserved. Crafted for holistic balance & harmony.
+      </div>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="#hero" style="color: #9ca3af;">Privacy Policy</a>
+        <a href="#hero" style="color: #9ca3af;">Terms of Sanctuary</a>
+        <a href="#hero" style="color: var(--gold-300);">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Cart Toast Notification -->
+  <div class="cart-toast" id="cart-toast" role="alert" aria-live="polite">
+    <div class="cart-toast-icon">✨</div>
+    <div>
+      <div style="font-weight: 700; font-size: 0.98rem; margin-bottom: 0.15rem;" id="toast-title">Added to Cart!</div>
+      <div style="font-size: 0.85rem; color: #d1d5db;" id="toast-desc">The Moment We Rise (Signed Hardcover) has been added to your cart.</div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
